@@ -9,6 +9,7 @@
 
 
 ## Wireframe
+![Wire Frame]('Homepage.png')
 
 ### Technologies employed
 * Vanilla JavaScript
