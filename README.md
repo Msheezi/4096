@@ -25,3 +25,11 @@
 ### 7/18
 * Review and develop board and tile strategy
 * Board base setup and styled
+
+### 7/19 
+* build game pieces 
+* finalize game logic
+
+### 7/20-7/21
+* style and make presentable
+* web hosting
