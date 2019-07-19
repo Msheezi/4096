@@ -35,7 +35,7 @@ window.boxes = [
 window.createBoxes = (boxes) => {
     let moxes = []
     for(let i=0;i<boxes.length; i++){
-        boxes[i].drawRect(ctx);
+        boxes[i].draw(ctx);
        moxes.push(boxes[i]) ;
     }
     

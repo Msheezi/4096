@@ -10,13 +10,13 @@ export default class MovingObject{
         this.color = options.color, // update the color of the object based on its current value?
          // this is updated during the collision 
 
-        this.drawRect = this.drawRect.bind(this)
+        this.draw = this.draw.bind(this)
         this.move = this.move.bind(this)
         this.validMove = this.validMove.bind(this)
     }
     
 
-    drawRect(ctx){
+    draw(ctx){
         ctx.fillStyle = this.color;
         ctx.fillRect(this.pos[0], this.pos[1],this.width,this.height);
         ctx.fillStyle = '#292F36';
@@ -28,7 +28,7 @@ export default class MovingObject{
         ctx.clearRect(this.pos[0], this.pos[1], this.width, this.height);
         this.pos[0] += this.vel;
         // this.pos[1] += this.vel ///need to update the movement logic based on the keyboard input value
-        this.drawRect(ctx)
+        this.draw(ctx)
     }
 
     validMove(){
