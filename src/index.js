@@ -14,7 +14,7 @@ const ctx = canvas.getContext('2d')
 window.MovingObject = MovingObject;
 window.ctx = ctx;
 window.boxes = [
-    new MovingObject({ pos: [16, 16], vel: 146, size: 130, value: 4, color: "#F5E6E8" }),
+    // new MovingObject({ pos: [16, 16], vel: 146, size: 130, value: 2, color: "#F5E6E8" }),
     new MovingObject({ pos: [162, 16], vel: 146, size: 130, value: 4, color: "#F5E6E8" }),
     new MovingObject({ pos: [308, 16], vel: 146, size: 130, value: 4, color: "#F5E6E8" }),
     new MovingObject({ pos: [454, 16], vel: 146, size: 130, value: 4, color: "#F5E6E8" }),
@@ -33,11 +33,17 @@ window.boxes = [
 ]
 
 window.createBoxes = (boxes) => {
+    let moxes = []
     for(let i=0;i<boxes.length; i++){
-        boxes[i].drawRect(ctx)
+        boxes[i].drawRect(ctx);
+       moxes.push(boxes[i]) ;
     }
     
-
+window.move = (moxes) => {
+    for(let i=0;i< moxes.length; i++){
+        moxes[i].move(ctx)
+    }
+}
 
 }
 

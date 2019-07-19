@@ -5,15 +5,17 @@ export default class Board{
     }
 
     makeGrid() {
-       const grid = [];
+        const grid = [];
 
-       for (let i = 0; i < 4; i++) {
-           grid.push([]);
-           for (let j = 0; j < 4; j++) {
-               grid[i].push(null);
-           }
-       }
+        for (let i = 0; i < 4; i++) {
+            grid.push([]);
+            for (let j = 0; j < 4; j++) {
+                grid[i].push("");
+            }
+        }
 
-       return grid;
-   }
+        return grid;
+    }
 }
+
+

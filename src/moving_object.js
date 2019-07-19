@@ -11,6 +11,8 @@ export default class MovingObject{
          // this is updated during the collision 
 
         this.drawRect = this.drawRect.bind(this)
+        this.move = this.move.bind(this)
+        this.validMove = this.validMove.bind(this)
     }
     
 
@@ -24,33 +26,41 @@ export default class MovingObject{
 
     move(ctx) {
         ctx.clearRect(this.pos[0], this.pos[1], this.width, this.height);
-        this.pos[0] += this.vel
-        this.pos[1] += this.vel ///need to update the movement logic based on the keyboard input value
+        this.pos[0] += this.vel;
+        // this.pos[1] += this.vel ///need to update the movement logic based on the keyboard input value
         this.drawRect(ctx)
     }
 
-    placeRandomTile(ctx) {
-        // run check for empty space
-        // if spot is empty, draw tile by getting placing tile coordinates in into object
-        // 
-    }
+    validMove(){
+        // let x = this.pos[0]
+        // let y = this.pos[1]
+            (this.pos[0] + this.vel <= 454) ? this.move(ctx) : console.log("Invalid Move")
 
-    isSpotEmpty() {
-        // iterate through grid spaces or select random location and return a boolean if empty.  if no empties found, end game
-        // 
+        }
     }
-
-    gameOver() {
-        //if no empty spaces game ends in loss
-        // if value of tiles equals 4096 game ends in win
-    }
-
-    // createBoxes(ctx) {
-        
-        
+    
+    // placeRandomTile(ctx) {
+    //     // run check for empty space
+    //     // if spot is empty, draw tile by getting placing tile coordinates in into object
+    //     // 
     // }
 
-}
+    // isSpotEmpty() {
+    //     // iterate through grid spaces or select random location and return a boolean if empty.  if no empties found, end game
+    //     // 
+    // }
+
+    // gameOver() {
+    //     //if no empty spaces game ends in loss
+    //     // if value of tiles equals 4096 game ends in win
+    // }
+
+    // // createBoxes(ctx) {
+        
+        
+    // // }
+
+// }
 
 
 // const mo = new MovingObject(
