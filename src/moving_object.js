@@ -7,16 +7,19 @@ export default class MovingObject{
         this.width = options.size, //width and size needed for movements
         this.height = options.size, // height needed for movements and drawing and clearing
         this.value = options.value, // point value that will increase in collisions
-        this.color = options.color
-        this.draw = this.draw.bind(this)
+        this.color = options.color, // update the color of the object based on its current value?
+         // this is updated during the collision 
+
+        this.drawRect = this.drawRect.bind(this)
     }
     
-   
-
 
     drawRect(ctx){
         ctx.fillStyle = this.color;
-        ctx.fillRect(this.pos[0], this.pos[1],this.width,this.height)
+        ctx.fillRect(this.pos[0], this.pos[1],this.width,this.height);
+        ctx.fillStyle = '#292F36';
+        ctx.font = "40pt arial";
+        ctx.fillText(`${this.value}`, this.pos[0] + 50 , this.pos[1] + 85 );
     }
 
     move(ctx) {
@@ -24,6 +27,22 @@ export default class MovingObject{
         this.pos[0] += this.vel
         this.pos[1] += this.vel ///need to update the movement logic based on the keyboard input value
         this.drawRect(ctx)
+    }
+
+    placeRandomTile(ctx) {
+        // run check for empty space
+        // if spot is empty, draw tile by getting placing tile coordinates in into object
+        // 
+    }
+
+    isSpotEmpty() {
+        // iterate through grid spaces or select random location and return a boolean if empty.  if no empties found, end game
+        // 
+    }
+
+    gameOver() {
+        //if no empty spaces game ends in loss
+        // if value of tiles equals 4096 game ends in win
     }
 
     // createBoxes(ctx) {
