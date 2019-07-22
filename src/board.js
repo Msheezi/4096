@@ -55,7 +55,7 @@
          let w = 130
          for (let i = 0; i < 4; i++) {
              for (let j = 0; j < 4; j++) {
-                 this.ctx.strokeStyle = 'red'
+                 this.ctx.strokeStyle = 'black'
                  
                  this.ctx.strokeRect(i * w + (16 * i) +16, j * w + (16 * j)+16, w, w)
                  let val = this.grid[i][j]
@@ -66,7 +66,7 @@
                      this.ctx.fillText(val, i * w + (16 * i) + 66, j * w + (16 * j) + 101)
                  } else {
                      this.ctx.fillStyle = 'white'
-                     this.ctx.fillRect(i * w + (16 * i) + 16, j * w + (16 * j) + 16, w, w)
+                     this.ctx.strokeRect(i * w + (16 * i) + 16, j * w + (16 * j) + 16, w, w)
 
                  }
              }
@@ -89,7 +89,7 @@
              console.log("move registerd")
             
          }
-         
+
          this.addTile()
         //  return this.grid
          
