@@ -47,9 +47,12 @@ box-sizing:border-box;
 .gamebox {
    
     display: flex;
+   
+
     width: 600px;
-    height: 600px;
+    height: 500px;
     background-color: rgb(211, 192, 171);
+    box-sizing: border-box;
     
 }
 
