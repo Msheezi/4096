@@ -87,7 +87,8 @@
 
              this.grid[i]=arr
              console.log("move registerd")
-            
+            //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
+            // has to take an argument of a tile 
          }
 
          this.addTile()
