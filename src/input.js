@@ -1,4 +1,4 @@
-
+import board from './board'
 
 export default class InputHandler {
     constructor(board) {
@@ -18,5 +18,9 @@ export default class InputHandler {
 
           }
         })
+        
+        
+
+
     }
 }

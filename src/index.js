@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = CANVAS_HEIGHT;
   // const game = new Game();
   const board = new Board(ctx, CANVAS_WIDTH);
+  // const restart = () => board.restart
   board.setup();
   board.draw();
+  document.getElementById("newgame").addEventListener("click", GameView.restart)
   new InputHandler(board);
   new GameView(ctx, board).start();
 });

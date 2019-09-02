@@ -20,6 +20,8 @@
         
     }
 
+   
+
     addTile() {
         let options = [];
         for (let i = 0; i < 4; i++) {
@@ -107,7 +109,7 @@
              arr = zeros.concat(arr)
 
              this.grid[i] = arr
-             console.log("move registerd")
+             console.log("move registered")
              // }
          }
          this.addTile()
@@ -120,6 +122,23 @@
        this.ctx.clearRect(0,0,600,600)
    }
 
+     restart() {
+        //  debugger
+        //  this.grid = [
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0]
+        //  ];
+
+        //  this.setup()
+         for (let i = 0; i < 4; i++) {
+             for (let j = 0; j < 4; j++) {
+                 if (this.grid[i][j] !== 0) {
+                     this.grid[i][j] = 0}
+                 }}
+        console.log("test")
+     }
    
 }
 

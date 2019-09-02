@@ -25,5 +25,26 @@ export default class GameView{
         this.board.draw()
         requestAnimationFrame(this.animate.bind(this))
     }
+
+
+    restart() {
+        //  debugger
+        //  this.grid = [
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0],
+        //      [0, 0, 0, 0]
+        //  ];
+
+        //  this.setup()
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (this.grid[i][j] !== 0) {
+                    this.grid[i][j] = 0
+                }
+            }
+        }
+        console.log("test")
+    }
 }
 
