@@ -110,6 +110,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/game.js":
+/*!*********************!*\
+  !*** ./src/game.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./board */ \"./src/board.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./src/constants.js\");\n/* harmony import */ var _game_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./game_view */ \"./src/game_view.js\");\n\n\n\n\n\nclass Game {\n    constructor(ctx){\n        this.board = new _board__WEBPACK_IMPORTED_MODULE_0__[\"default\"](ctx, _constants__WEBPACK_IMPORTED_MODULE_1__[\"CANVAS_WIDTH\"])\n        this.gameview = new _game_view__WEBPACK_IMPORTED_MODULE_2__[\"default\"](ctx, board).start();\n        this.input = new InputHandler(board);\n\n        this.board.setup()\n        this.board.draw()\n    }\n\n    // newGame(){\n    //     board.setup()\n    //     board.draw()\n    // }\n    \n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Game);\n\n//# sourceURL=webpack:///./src/game.js?");
+
+/***/ }),
+
 /***/ "./src/game_view.js":
 /*!**************************!*\
   !*** ./src/game_view.js ***!
@@ -130,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/constants.js\");\n/* harmony import */ var _game_view__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game_view */ \"./src/game_view.js\");\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./board */ \"./src/board.js\");\n/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./input */ \"./src/input.js\");\n\n// import Game from './game'\n\n\n\n\nconsole.log(\"WebPackIsWorking\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const canvas = document.getElementById(\"game-canvas\");\n  const ctx = canvas.getContext(\"2d\");\n  canvas.width = _constants__WEBPACK_IMPORTED_MODULE_0__[\"CANVAS_WIDTH\"];\n  canvas.height = _constants__WEBPACK_IMPORTED_MODULE_0__[\"CANVAS_HEIGHT\"];\n  // const game = new Game();\n  const board = new _board__WEBPACK_IMPORTED_MODULE_2__[\"default\"](ctx, _constants__WEBPACK_IMPORTED_MODULE_0__[\"CANVAS_WIDTH\"]);\n  // const restart = () => board.restart\n  const newGame = (ctx, CANVAS_WIDTH) => {\n    // const board = new Board(ctx, CANVAS_WIDTH)\n    board\n    board.setup()\n    board.draw()\n  }\n  board.setup();\n  board.draw();\n  document.getElementById(\"newgame\").addEventListener(\"click\", _game_view__WEBPACK_IMPORTED_MODULE_1__[\"default\"].boardWipe)\n  new _input__WEBPACK_IMPORTED_MODULE_3__[\"default\"](board);\n  new _game_view__WEBPACK_IMPORTED_MODULE_1__[\"default\"](ctx, board).start();\n});\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/constants.js\");\n/* harmony import */ var _game_view__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game_view */ \"./src/game_view.js\");\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./board */ \"./src/board.js\");\n/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./input */ \"./src/input.js\");\n/* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game */ \"./src/game.js\");\n\n// import Game from './game'\n\n\n\n\n\nconsole.log(\"WebPackIsWorking\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const canvas = document.getElementById(\"game-canvas\");\n  const ctx = canvas.getContext(\"2d\");\n  canvas.width = _constants__WEBPACK_IMPORTED_MODULE_0__[\"CANVAS_WIDTH\"];\n  canvas.height = _constants__WEBPACK_IMPORTED_MODULE_0__[\"CANVAS_HEIGHT\"];\n  // const game = new Game();\n  // const board = new Board(ctx, CANVAS_WIDTH);\n  // const restart = () => board.restart\n  const newGame = (ctx, CANVAS_WIDTH) => {\n    // const board = new Board(ctx, CANVAS_WIDTH)\n    \n    \n  }\n  // board.setup();\n  // board.draw();\n  // document.getElementById(\"newgame\").addEventListener(\"click\", GameView.boardWipe)\n  new _game__WEBPACK_IMPORTED_MODULE_4__[\"default\"] (ctx)\n  \n});\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

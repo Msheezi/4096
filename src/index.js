@@ -3,6 +3,7 @@ import { CANVAS_HEIGHT, CANVAS_WIDTH } from "./constants";
 import GameView from "./game_view";
 import Board from "./board";
 import InputHandler from "./input";
+import Game from './game'
 
 console.log("WebPackIsWorking");
 
@@ -12,17 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
   // const game = new Game();
-  const board = new Board(ctx, CANVAS_WIDTH);
+  // const board = new Board(ctx, CANVAS_WIDTH);
   // const restart = () => board.restart
   const newGame = (ctx, CANVAS_WIDTH) => {
     // const board = new Board(ctx, CANVAS_WIDTH)
-    board
-    board.setup()
-    board.draw()
+    
+    
   }
-  board.setup();
-  board.draw();
-  document.getElementById("newgame").addEventListener("click", GameView.boardWipe)
-  new InputHandler(board);
-  new GameView(ctx, board).start();
+  // board.setup();
+  // board.draw();
+  // document.getElementById("newgame").addEventListener("click", GameView.boardWipe)
+  new Game (ctx)
+  
 });
