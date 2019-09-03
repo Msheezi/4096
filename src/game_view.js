@@ -8,9 +8,7 @@ export default class GameView{
 
     }
 
-    // gameLoop(timestamp) {
-        
-    // }
+    
 
     start(){
         this.lastTime = 0
@@ -18,6 +16,9 @@ export default class GameView{
         requestAnimationFrame(this.animate.bind(this))
     }
 
+    newGame() {
+        this.board.boardWipe()
+    }
     animate(time){
         const deltaTime = time - this.lastTime;
         this.lastTime = time;

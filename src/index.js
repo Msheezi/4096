@@ -14,9 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // const game = new Game();
   const board = new Board(ctx, CANVAS_WIDTH);
   // const restart = () => board.restart
+  const newGame = (ctx, CANVAS_WIDTH) => {
+    // const board = new Board(ctx, CANVAS_WIDTH)
+    board
+    board.setup()
+    board.draw()
+  }
   board.setup();
   board.draw();
-  document.getElementById("newgame").addEventListener("click", GameView.restart)
+  document.getElementById("newgame").addEventListener("click", GameView.boardWipe)
   new InputHandler(board);
   new GameView(ctx, board).start();
 });

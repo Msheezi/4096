@@ -88,7 +88,7 @@
              arr = arr.concat(zeros)
 
              this.grid[i]=arr
-             console.log("move registerd")
+             console.log("move registered")
             //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
             // has to take an argument of a tile 
          }
