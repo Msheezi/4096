@@ -13,7 +13,7 @@ export default class InputHandler {
                   break;
               case 37: //move left
                   break;
-              case 39: //move right
+              case 39: board.moveRight()
                   break;
 
           }

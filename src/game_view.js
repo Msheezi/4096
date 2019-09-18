@@ -20,11 +20,11 @@ export default class GameView{
         this.board.boardWipe()
     }
     animate(time){
+        requestAnimationFrame(this.animate.bind(this))
         const deltaTime = time - this.lastTime;
         this.lastTime = time;
         this.board.boardWipe();
         this.board.draw()
-        requestAnimationFrame(this.animate.bind(this))
     }
 
 

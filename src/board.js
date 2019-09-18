@@ -59,16 +59,16 @@
              for (let j = 0; j < 4; j++) {
                  this.ctx.strokeStyle = 'black'
                  
-                 this.ctx.strokeRect(i * w + (16 * i) +16, j * w + (16 * j)+16, w, w)
+                 this.ctx.strokeRect(j * w + (16 * j) +16, i * w + (16 * i)+16, w, w)
                  let val = this.grid[i][j]
                  if (this.grid[i][j] !== 0) {
                      this.ctx.fillStyle = 'blue'
                      this.ctx.font = '40pt arial'
                      this.ctx.textAlign = 'center center'
-                     this.ctx.fillText(val, i * w + (16 * i) + 66, j * w + (16 * j) + 101)
+                     this.ctx.fillText(val, (j * w + (16 * j) + 66), (i * w + (16 * i) + 101))
                  } else {
                      this.ctx.fillStyle = 'white'
-                     this.ctx.strokeRect(i * w + (16 * i) + 16, j * w + (16 * j) + 16, w, w)
+                     this.ctx.strokeRect(j * w + (16 * j) + 16, i * w + (16 * i) + 16, w, w)
 
                  }
              }
@@ -140,8 +140,32 @@
         console.log("test")
      }
    
+
+moveRight(){
+    debugger
+    for(let r=0;r<4;r++){
+        let row = this.grid[r]
+        for (let i = 3; i > -1; i--) {
+        let start = row[i]
+        if (start === 0) {
+            for (let k = i - 1; k > -1; k--) {
+                if (row[k] !== 0) {
+                    row[i] = row[k]
+                    row[k] = 0
+                } else if (start !== 0) {
+                    for (let k = i - 1; k > -1; k--) {
+                        if (row[k] === start) {
+                            start += row[k]
+                            row[k] = 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+    this.grid[r] = row
+}
+    this.addTile()
 }
 
-
-
-
+ }
