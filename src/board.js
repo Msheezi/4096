@@ -142,30 +142,34 @@
    
 
 moveRight(){
-    debugger
+    
     for(let r=0;r<4;r++){
         let row = this.grid[r]
         for (let i = 3; i > -1; i--) {
         let start = row[i]
+
         if (start === 0) {
             for (let k = i - 1; k > -1; k--) {
                 if (row[k] !== 0) {
                     row[i] = row[k]
-                    row[k] = 0
+                    row[k] = 0}
+                }
+
                 } else if (start !== 0) {
                     for (let k = i - 1; k > -1; k--) {
                         if (row[k] === start) {
-                            start += row[k]
+                            row[i] = start * 2
                             row[k] = 0
+                            break
                         }
                     }
                 }
             }
+            this.grid[r] = row
         }
+        this.addTile()
     }
-    this.grid[r] = row
-}
-    this.addTile()
 }
 
- }
+
+ 
