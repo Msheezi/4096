@@ -11,7 +11,7 @@ export default class InputHandler {
               break;
               case 40: board.moveDown() //move down
                   break;
-              case 37: //move left
+              case 37: board.moveLeft()
                   break;
               case 39: board.moveRight()
                   break;
