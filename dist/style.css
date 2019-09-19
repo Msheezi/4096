@@ -11,7 +11,7 @@ body {
 .top-bar {
     position: fixed;
     top: 0;
-    height: 50px;
+    height: 100px;
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
@@ -23,7 +23,8 @@ body {
 
 .top-bar h2 {
     text-align: center;
-
+    font-size: 30pt;
+    font-family: 'Turret Road', cursive;
 
 }
 
@@ -39,13 +40,25 @@ box-sizing:border-box;
 
 }
 
+
+
 .left-margin {
     display:flex;
     flex-direction: column;
     width: 20%;
     height: 600px;
-    
+    font-family: 'Turret Road', cursive;
     /* background-color: rgba(188, 230, 243, 0.966); */
+}
+
+.left-margin > p {
+    font-size: 15pt;
+    margin-left: 20px;
+}
+
+li {
+    font-weight: 600;
+    
 }
 
 .gamebox {

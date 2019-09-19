@@ -7,6 +7,7 @@
         <title>4096: The Game For Sliders</title>
         <script src="./dist/main.js"></script>
         <link rel="stylesheet" type="text/css" href="./dist/style.css" >
+        <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,8 +21,9 @@
               
               <ol>
                   <li>Use the arrow keys to move the tiles in the desired direction</li>
-                  <li>Tiles can combine when you collapse two of the same values together</li>
+                  <li>Tiles combine when identical values collide and their value will increase</li>
                   <li>Continue combining tiles until until your tile value reaches 4096</li>
+                  <li>After each move a new tile is placed in a random position on the board</li>
                   <li>The game ends when you reach 4096 or there are no more available moves</li>
               </ol>
         </div>
@@ -31,8 +33,7 @@
             
         </div>
         <div class="right-margin">
-            <p>Score:</p>
-            <br>
+            
             <button id="newgame" >New Game</button>
             
 
