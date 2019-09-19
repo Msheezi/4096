@@ -56,7 +56,8 @@ box-sizing:border-box;
     width: 600px;
     height: 500px;
     /* background-color: rgb(211, 192, 171); */
-    background: linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+    background: #17202A  ;
+    /* linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); */
     box-sizing: border-box;
     
 }

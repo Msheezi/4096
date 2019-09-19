@@ -8,7 +8,7 @@
         this.addTile = this.addTile.bind(this)
         this.drawGrid = this.drawGrid.bind(this)
         this.boardWipe = this.boardWipe.bind(this)
-        
+        this.colorChooser = this.colorChooser.bind(this)
         this.moveUp = this.moveUp.bind(this)
         // this.moveUpHelper = this.moveUpHelper.bind(this)
         
@@ -58,12 +58,13 @@
          let w = 130
          for (let i = 0; i < 4; i++) {
              for (let j = 0; j < 4; j++) {
-                 this.ctx.strokeStyle = 'black'
+                 this.ctx.strokeStyle = 'white'
                  
                  this.ctx.strokeRect(j * w + (16 * j) +16, i * w + (16 * i)+16, w, w)
                  let val = this.grid[i][j]
+                
                  if (this.grid[i][j] !== 0) {
-                     this.ctx.fillStyle = 'blue'
+                     this.ctx.fillStyle = this.colorChooser(val)
                      this.ctx.font = '40pt arial'
                      this.ctx.textAlign = 'center center'
                      this.ctx.fillText(val, (j * w + (16 * j) + 66), (i * w + (16 * i) + 101))
@@ -76,6 +77,27 @@
          }
      }   
 
+     colorChooser(val){
+         let color
+         if (val < 10){
+             color = "green"
+         } else if (val > 10 && val < 64) {
+             color = "blue"
+         } else if (val === 64) {
+             color = "red"
+         } else if (val === 128) {
+             color = "orange"
+         } else if (val === 256) {
+             color = "purple"
+         } else if (val === 512) {
+             color = "yellow"
+         } else if (val === 1024) {
+             color = "gold"
+         } else if (val > 1024){
+             color = "#641E16"
+         }
+         return color
+     }
  
 
 
