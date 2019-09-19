@@ -11,7 +11,7 @@
         this.colorChooser = this.colorChooser.bind(this)
         this.moveUp = this.moveUp.bind(this)
         this.textAligner = this.textAligner.bind(this)
-        // this.moveUpHelper = this.moveUpHelper.bind(this)
+        
         
         this.grid = [
              [0, 0, 0, 0],
@@ -113,66 +113,20 @@
      }
 
 
-    //  moveUp() {
-         
-    //      for (let i = 0; i < 4; i++) {
-    //         let row = this.grid[i] 
-    //         let arr = row.filter(val => val)
-    //          let missing = 4 - arr.length;
-    //          let zeros = Array(missing).fill(0)
-    //          arr = arr.concat(zeros)
-                
-    //          this.grid[i]=arr
-    //          console.log("move registered")
-    //         //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
-    //         // has to take an argument of a tile 
-    //      }
-
-    //      this.addTile()
-    //     //  return this.grid
-         
-
-    //  }
-     
-    //  moveDown() {
-    //      // if (key === ' '){
-    //      for (let i = 0; i < 4; i++) {
-    //          let row = this.grid[i]
-    //          let arr = row.filter(val => val)
-    //          let missing = 4 - arr.length;
-    //          let zeros = Array(missing).fill(0)
-    //          arr = zeros.concat(arr)
-
-    //          this.grid[i] = arr
-    //          console.log("move registered")
-    //          // }
-    //      }
-    //      this.addTile()
-    //      //  return this.grid
-
-
-    //  }
+    
 
      boardWipe() {
        this.ctx.clearRect(0,0,600,600)
    }
 
      restart() {
-        //  debugger
-        //  this.grid = [
-        //      [0, 0, 0, 0],
-        //      [0, 0, 0, 0],
-        //      [0, 0, 0, 0],
-        //      [0, 0, 0, 0]
-        //  ];
-
-        //  this.setup()
+      
          for (let i = 0; i < 4; i++) {
              for (let j = 0; j < 4; j++) {
                  if (this.grid[i][j] !== 0) {
                      this.grid[i][j] = 0}
                  }}
-        console.log("test")
+        
      }
    
      moveRight() {
@@ -194,13 +148,11 @@
              }
 
              this.grid[i] = arr
-             console.log("move registered")
-             //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
-             // has to take an argument of a tile 
+             
          }
 
          this.addTile()
-         //  return this.grid
+         
 
 
      }
@@ -225,21 +177,17 @@
              }
 
              this.grid[i] = arr
-             console.log("move registered")
-             //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
-             // has to take an argument of a tile 
+                          
          }
 
          this.addTile()
-         //  return this.grid
-
-
+         
      }
 
 
 
      moveUp(){
-        //  debugger
+       
          for(let j=0;j<4;j++){
             let layer = []
             for(let i=0;i<=3 ;i++){
@@ -258,7 +206,7 @@
                         // arr[k + 1] = 0
                     }
                 }
-                // debugger
+                
              for(let g = 0;g<4;g++){
                  this.grid[g][j] = arr[g]
              }
@@ -269,7 +217,7 @@
      }
 
      moveDown() {
-         //  debugger
+         
          for (let j = 4; j > -1; j--) {
              let layer = []
              for (let i = 3; i > -1; i--) {
@@ -374,4 +322,42 @@
     //      this.addTile()
     //      console.log(this.grid)
     //      console.log("left")
+    //  }//  moveUp() {
+
+    //      for (let i = 0; i < 4; i++) {
+    //         let row = this.grid[i] 
+    //         let arr = row.filter(val => val)
+    //          let missing = 4 - arr.length;
+    //          let zeros = Array(missing).fill(0)
+    //          arr = arr.concat(zeros)
+
+    //          this.grid[i]=arr
+    //          console.log("move registered")
+    //         //at any point if the values are the same, combine the values as.  helper function called as a part of the move 
+    //         // has to take an argument of a tile 
+    //      }
+
+    //      this.addTile()
+    //     //  return this.grid
+
+
+    //  }
+
+    //  moveDown() {
+    //      // if (key === ' '){
+    //      for (let i = 0; i < 4; i++) {
+    //          let row = this.grid[i]
+    //          let arr = row.filter(val => val)
+    //          let missing = 4 - arr.length;
+    //          let zeros = Array(missing).fill(0)
+    //          arr = zeros.concat(arr)
+
+    //          this.grid[i] = arr
+    //          console.log("move registered")
+    //          // }
+    //      }
+    //      this.addTile()
+    //      //  return this.grid
+
+
     //  }
