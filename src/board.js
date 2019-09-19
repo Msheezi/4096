@@ -10,6 +10,7 @@
         this.boardWipe = this.boardWipe.bind(this)
         this.colorChooser = this.colorChooser.bind(this)
         this.moveUp = this.moveUp.bind(this)
+        this.textAligner = this.textAligner.bind(this)
         // this.moveUpHelper = this.moveUpHelper.bind(this)
         
         this.grid = [
@@ -67,7 +68,7 @@
                      this.ctx.fillStyle = this.colorChooser(val)
                      this.ctx.font = '40pt arial'
                      this.ctx.textAlign = 'center center'
-                     this.ctx.fillText(val, (j * w + (16 * j) + 66), (i * w + (16 * i) + 101))
+                     this.ctx.fillText(val, (j * w + (16 * j) + this.textAligner(val)), (i * w + (16 * i) + 101))
                  } else {
                      this.ctx.fillStyle = 'white'
                      this.ctx.strokeRect(j * w + (16 * j) + 16, i * w + (16 * i) + 16, w, w)
@@ -99,6 +100,17 @@
          return color
      }
  
+     textAligner(val){
+         if (val < 10){
+             return 66
+         } else if (val >=10 && val <100){
+             return 56
+         } else if (val > 100 && val < 1000){
+             return 40
+         } else if (val >= 1000){
+            return 20
+         }
+     }
 
 
     //  moveUp() {
