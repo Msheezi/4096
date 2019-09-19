@@ -155,6 +155,7 @@
                      arr[j-1]= 0
                  } else if (arr[j]===0){
                      arr[j] = arr[j-1] || 0
+                     arr[j - 1] = 0
                  }
              }
 
@@ -185,6 +186,7 @@
                      arr[j + 1] = 0
                  } else if (arr[j] === 0) {
                      arr[j] = arr[j + 1] || 0
+                     arr[j + 1] = 0
                  }
              }
 
@@ -219,6 +221,7 @@
                         arr[k + 1] = 0
                     } else if (arr[k] === 0) {
                         arr[k] = arr[k + 1] || 0
+                        // arr[k + 1] = 0
                     }
                 }
                 // debugger
@@ -248,6 +251,7 @@
                      arr[k + 1] = 0
                  } else if (arr[k] === 0) {
                      arr[k] = arr[k + 1] || 0
+                    //  arr[k + 1] = 0
                  }
              }
              // debugger
