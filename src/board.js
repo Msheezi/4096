@@ -13,6 +13,20 @@ export default class Board {
     this.textAligner = this.textAligner.bind(this);
 
     this.grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+    this.color = {
+      2: "#4DF52F",
+      4: "#27CD45",
+      8: "#23A23A",
+      16: "#44B0CD",
+      32: "#3BD5DF",
+      64: "#23F2F5",
+      128: "#FCAB09",
+      256: "#F3BD20",
+      512: "#FBE066",
+      1024: "F59C44",
+      2048: "#F27D31",
+      4096: "#EB260B"
+    };
   }
 
   addTile() {
@@ -55,7 +69,7 @@ export default class Board {
         let val = this.grid[i][j];
 
         if (this.grid[i][j] !== 0) {
-          this.ctx.fillStyle = this.colorChooser(val);
+          this.ctx.fillStyle = this.color[val];
           this.ctx.font = "40pt arial";
           this.ctx.textAlign = "center center";
           this.ctx.fillText(
