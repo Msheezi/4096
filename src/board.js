@@ -69,9 +69,12 @@ export default class Board {
         let val = this.grid[i][j];
 
         if (this.grid[i][j] !== 0) {
+          this.ctx.fillStyle = "#000";
+          this.ctx.fillRect(j * w + j * 16 + 20, i * w + i * 16 + 20, 122, 122); // ctx.drawImage if you have an image
           this.ctx.fillStyle = this.color[val];
           this.ctx.font = "40pt arial";
           this.ctx.textAlign = "center center";
+
           this.ctx.fillText(
             val,
             j * w + 16 * j + this.textAligner(val),
