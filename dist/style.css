@@ -24,17 +24,7 @@ body {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  /* background-color: rgba(188, 230, 243, 0.966); */
-  /* background-color: black; */
-  /* background-color: #F5E6E8; */
   background-color: #faf8ef;
-  /* background: linear-gradient(
-    to bottom,
-    #1e5799 0%,
-    #2989d8 50%,
-    #207cca 51%,
-    #7db9e8 100%
-  ); */
 }
 
 .top-bar h2 {
@@ -74,14 +64,11 @@ li {
 }
 
 .gamebox {
-  display: flex;
-
+  /* display: flex;
+  flex-direction: column; */
   width: 600px;
-  height: 500px;
-  /* background-color: rgb(211, 192, 171); */
+  height: 600px;
   background-color: #bbada0;
-  /* background-image: url("./Canva\ -\ Brown\ Brick\ Wall.jpg"); */
-  /* linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); */
   box-sizing: border-box;
 }
 
@@ -103,3 +90,48 @@ li {
 /* .footer {
     text-align: center;
 } */
+
+.contact-info {
+  height: 200px;
+  background: transparent;
+}
+
+#contact-info p {
+  font-size: 0.8rem;
+  line-height: 0.25;
+  font-weight: 600;
+}
+
+ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0 0.75em 0 0;
+}
+
+ul.icons li:last-child {
+  padding-right: 0;
+}
+
+ul.icons li a {
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px #ffffff;
+  display: inline-block;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  width: 2.25rem;
+  text-decoration: none;
+}
+
+ul.icons li a:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+ul.icons li a:active {
+  background-color: rgba(255, 255, 255, 0.175);
+}
