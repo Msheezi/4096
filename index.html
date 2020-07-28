@@ -25,6 +25,13 @@
     />
     <link rel="icon" type="image/png" sizes="16x16" href="./dist/favicon.ico" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script >
+      window.addEventListener("keydown", (e) => {
+          if ([38, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault()
+          }
+        })
+    </script>
   </head>
   <body>
     <div class="top-bar">

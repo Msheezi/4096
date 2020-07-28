@@ -12,12 +12,14 @@ export default class InputHandler {
           this.board.moveDown(); //move down
           break;
         case 37:
+
           this.board.moveLeft();
           break;
         case 39:
+
           this.board.moveRight();
           break;
       }
-    });
+    }, false);
   }
 }
